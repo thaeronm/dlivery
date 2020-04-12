@@ -1,12 +1,12 @@
 'use strict'
 var express = require('express');
 var bodyParser = require('body-parser');
-var passport = require('passport');
-var expressSession = require('express-session');
+var path = require('path');
+
 var app = express();
 
 //cargar archivos rutas
-var project_routes = require('./routes');
+var project_routes = require('./routes/project');
 
 // Configurar cabeceras y cors
 app.use((req, res, next) => {
@@ -20,12 +20,12 @@ app.use((req, res, next) => {
 //middlewares
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
-app.use(expressSession({secret: 'dlivery-secret-key'}));
-app.use(passport.initialize());
-app.use(passport.session());
 
 //rutas
 app.use('/api', project_routes);
+
+// static files
+app.use(express.static(path.join(__dirname, 'public')));
 
 // exportar
 module.exports = app;
