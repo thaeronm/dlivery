@@ -7,7 +7,6 @@ const AuthCtrl = {}
 
 AuthCtrl.Register = async (req, res) => {
     const body = req.body;
-    //Validar si el correo existe en la bd
     const val = await AuthProv.Email(body);
     if (val !== null) return res.status(403).send('Email registrado!');
     const User = await AuthProv.CreateUser(body);
