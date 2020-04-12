@@ -18,6 +18,8 @@ var AuthCtrl     = require('../controllers/AuthCtrl');
 var multipart = require('connect-multiparty');
 var multipartMiddleware = multipart({uploadDir: './uploads'});
 
+router.get('/',(res) => { res.send('Dlivery')});
+
 // Ruta de autenticación
 router.post('/register', AuthCtrl.Register);
 router.post('/login', AuthCtrl.Login);
