@@ -1,6 +1,7 @@
 'use strict'
 // Providers
 const ProductProv = require('../providers/ProductProv');
+const Product  = require('../models/Product');
 
 const ProductCtrl = {};
 
