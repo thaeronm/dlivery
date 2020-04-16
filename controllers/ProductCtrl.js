@@ -5,8 +5,11 @@ const Product  = require('../models/Product');
 
 const ProductCtrl = {};
 
-ProductCtrl.Create = async () => {
-
+ProductCtrl.Create = async (req, res) => {
+    const id       = req.params.id;
+    const body     = req.body;
+    const producto = await ProductProv.Create(body, id);
+    return res.status(201).json(producto);
 }
 
 ProductCtrl.Edit = async () => {
@@ -35,7 +38,8 @@ ProductCtrl.SearchForId = async (req, res) => {
             path: 'extras',
             populate: { 
                 path: 'items' 
-            }
+            },
+            path: 'tienda',
         });
 
     return res.json(productos);

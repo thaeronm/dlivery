@@ -29,7 +29,7 @@ router.get('/user', auth, AuthCtrl.User);
 
 // Ruta de Productos
 router.get('/product/search/', ProductCtrl.SearchForId);
-// router.post('/product/create', ProductCtrl.Create);
+router.post('/product/create/:id', ProductCtrl.Create);
 // router.put('/product/edit/:id', ProductCtrl.Edit);
 // router.delete('/product/delete/:id', ProductCtrl.Delete);
 // router.get('/product/store/:id', ProductCtrl.ListOfOneStore);

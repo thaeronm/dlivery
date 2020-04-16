@@ -1,56 +1,65 @@
 {
-    "descripcion":"Jamón, Piña, Cereza, Extra Queso",
-    "descuento":0,
-    "extras":[
+    "extras": [
         {
-            "descripcion":"Elige una bebida",
-            "id":"ide1",
-            "items":[
+            "items": [
                 {
-                    "id":"id1",
-                    "nombre":"Cocacola 2lts",
-                    "precio":20.0,
-                    "status":1
-                },{
-                    "id":"id2",
-                    "nombre":"Sprite 2lts",
-                    "precio":20.0,
-                    "status":1
-                },{
-                    "id":"id2",
-                    "nombre":"Fanta naranja 2lts",
-                    "precio":20.0,
-                    "status":1
-                }
+                    "nombre": "Coca Cola",
+                    "precio": 10.00,
+                    "status": false,
+                },
+                {
+                    "nombre": "Sprit",
+                    "precio": 9.00,
+                    "status": true,
+                },
             ],
-            "maximo":10,
-            "minimo":1,
-            "obligatorio":1,
-            "status":1,
-            "titulo":"¿Alguna Bebida?"
-        }
-    ],
-    "id":"5e7e947af791a709fd59405c",
-    "precios":[
+            "descripcion": "Bebida acompañante",
+            "maximo": 3,
+            "minimo": 1,
+            "obligatorio": false,
+            "status": false,
+            "titulo": "Refresco.",
+        },
         {
-            "descripcion":"42 CM 12 Rebanadas",
-            "precio":115.0,
-            "titulo":"Extra Grande"
-        },{
-            "descripcion":"34 CM 8 Rebanadas",
-            "precio":90.0,
-            "titulo":"Grande"
-        },{
-            "descripcion":"25 CM 8 Rebanadas",
-            "precio":70.0,
-            "titulo":"Mediana"
-        },{
-            "descripcion":"20 CM 4 Rebanadas",
-            "precio":45.0,
-            "titulo":"Chica"
+            "items": [
+                {
+                    "nombre": "Pequeño",
+                    "precio": 20.00,
+                    "status": false,
+                },
+                {
+                    "nombre": "Grande",
+                    "precio": 20.00,
+                    "status": true,
+                },
+            ],
+            "descripcion": "Tequeños rellenos de queso mozarella",
+            "maximo": 10,
+            "minimo": 1,
+            "obligatorio": false,
+            "status": false,
+            "titulo": "Dedos de mozzarela.",
+        },
+    ],
+    "precios": [
+        {
+            "descripcion": "Para una persona.",
+            "precio": 20.00,
+            "titulo": "Pequeña"
+        },
+        {
+            "descripcion": "Para dos personas.",
+            "precio": 30.00,
+            "titulo": "Mediana"
+        },
+        {
+            "descripcion": "Para cuatro personas.",
+            "precio": 50.00,
+            "titulo": "Grande"
         }
     ],
-    "status":1,
-    "tiendaId":"5e7e947af791a709fd59405c",
-    "titulo":"Pizza Hawaiiana"
+    "descripcion": "Pizza que trae queso, tocineta, salsa napolitana.",
+    "descuento": 10,
+    "status": true,
+    "titulo": "Pizza Champion Bacon",
 }

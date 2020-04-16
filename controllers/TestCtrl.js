@@ -17,14 +17,16 @@ const TestCtrl = {};
 
 TestCtrl.Create = async (req, res) => {
     
-    try {
-        let store = new Store({
-            tienda      : faker.company.companyName(),
-            descripcion : faker.lorem.paragraph(),
-        });
-        await store.save();
-    } catch (e) {
-        console.log(e);
+    for (let i = 0; i < 3; i++) {
+        try {
+            let store = new Store({
+                tienda      : faker.company.companyName(),
+                descripcion : faker.lorem.paragraph(),
+            });
+            await store.save();
+        } catch (e) {
+            console.log(e);
+        }
     }   
 
 
@@ -89,8 +91,8 @@ TestCtrl.Create = async (req, res) => {
             console.log(e);
         }   
     }
-
-    return res.status(200);
+    console.log('listo')
+    return res.send('ok');
 }
 
 module.exports = TestCtrl;
