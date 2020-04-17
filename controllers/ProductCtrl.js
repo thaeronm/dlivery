@@ -39,8 +39,7 @@ ProductCtrl.SearchForId = async (req, res) => {
             populate: { 
                 path: 'items' 
             },
-            path: 'tienda',
-        });
+        }).populate('tienda');
 
     return res.json(productos);
 }

@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 //rutas
 app.use('/api', project_routes);
 
-// static files
+// Archivos estaticos
 app.use(express.static(path.join(__dirname, 'public')));
 
 // exportar
