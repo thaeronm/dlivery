@@ -30,13 +30,13 @@ router.get('/user', Auth, AuthCtrl.User);
 
 
 // Ruta de Productos
-router.get('/product/search/', ProductCtrl.SearchForId);
-router.post('/product/create/:id', ProductCtrl.Create);
-// router.put('/product/edit/:id', ProductCtrl.Edit);
-// router.delete('/product/delete/:id', ProductCtrl.Delete);
-// router.get('/product/store/:id', ProductCtrl.ListOfOneStore);
-// router.get('/product/stores/list/:id', ProductCtrl.ListOfManyStore);
-// router.get('/product/search/:name', ProductCtrl.SearchForParams);
+router.get('/product/search/:id', ProductCtrl.SearchForId);
+router.post('/product/create', ProductCtrl.Create);
+router.put('/product/edit/:id', ProductCtrl.Edit);
+router.delete('/product/delete/:id', ProductCtrl.Delete);
+router.get('/product/store/:id', ProductCtrl.ListOfOneStore);
+router.get('/product/stores/list', ProductCtrl.ListOfManyStore);
+router.post('/product/params', ProductCtrl.SearchForParams);
 
 // Ruta para Extras
 router.get('/extras', ExtraCtrl.List);
